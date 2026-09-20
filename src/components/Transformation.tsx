@@ -85,7 +85,7 @@ function PinnedTransformation() {
         scrollTrigger: {
           trigger: section,
           start: "top top",
-          end: "+=320%",
+          end: () => (window.innerWidth < 768 ? "+=220%" : "+=320%"),
           pin: true,
           scrub: 1,
           anticipatePin: 1,

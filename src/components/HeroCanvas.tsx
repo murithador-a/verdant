@@ -76,7 +76,7 @@ export default function HeroCanvas() {
                 { r: 0.5, x: -2, y: -1.2, z: -1, mat: () => glass(0xb7c9b5, 0.5) },
                 {
                   r: 0.34,
-                  x: 2.6,
+                  x: 0.7,
                   y: -2.6,
                   z: 0.5,
                   mat: () =>
@@ -169,11 +169,15 @@ export default function HeroCanvas() {
         );
         io.observe(container);
 
-        const ro = new ResizeObserver(() => {
+        /* Pull the camera back on narrow screens so the scene stays in frame */
+        const fitCamera = (): void => {
           camera.aspect = W() / H();
+          camera.position.z = camera.aspect < 0.85 ? 19 : 14;
           camera.updateProjectionMatrix();
           renderer.setSize(W(), H());
-        });
+        };
+        fitCamera();
+        const ro = new ResizeObserver(fitCamera);
         ro.observe(container);
 
         const clock = new T.Clock();

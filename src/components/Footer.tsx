@@ -63,7 +63,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Verdant Clean on ${social.label} (opens in a new tab)`}
-                    className="group inline-flex items-center gap-2.5 rounded-sm text-[15px] text-cream/70 transition-colors duration-300 hover:text-lime"
+                    className="group inline-flex items-center gap-2.5 rounded-sm py-1 text-[15px] text-cream/70 transition-colors duration-300 hover:text-lime"
                   >
                     <SocialIcon name={social.icon} />
                     {social.label}

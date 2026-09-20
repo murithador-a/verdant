@@ -46,6 +46,16 @@ export default function Navbar() {
     };
   }, [open ]);
 
+  /* Auto-close the sidebar when resizing up to desktop nav */
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const onChange = (): void => {
+      if (mq.matches) setOpen(false);
+    };
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
   const go = useCallback((target: string) => {
     setOpen(false);
     // Let the menu start closing before travelling.
@@ -148,19 +158,32 @@ export default function Navbar() {
         />
       </header>
 
-      {/* Mobile menu */}
-      <div
-        id="mobile-menu"
+      {/* Sidebar backdrop */}
+      <button
+        type="button"
+        aria-label="Close menu"
+        tabIndex={open ? 0 : -1}
+        onClick={() => setOpen(false)}
         className={cn(
-          "fixed inset-0 z-40 flex flex-col justify-end overflow-y-auto bg-pine pb-10 pt-24 transition-all duration-500 lg:hidden",
-          open ? "visible opacity-100" : "invisible opacity-0",
+          "fixed inset-0 z-40 cursor-pointer bg-pine/70 backdrop-blur-sm transition-opacity duration-500 lg:hidden",
+          open ? "opacity-100" : "pointer-events-none opacity-0",
+        )}
+      />
+
+      {/* Sidebar — full-screen on phones, slide-in drawer on larger screens */}
+      <aside
+        id="mobile-menu"
+        inert={!open}
+        className={cn(
+          "fixed inset-y-0 right-0 z-40 flex w-full flex-col overflow-y-auto bg-pine transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:max-w-md sm:border-l sm:border-cream/10 lg:hidden",
+          open ? "translate-x-0" : "translate-x-full",
         )}
       >
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_50%_at_50%_0%,rgba(199,232,106,0.12),transparent_70%)]"
         />
-        <nav aria-label="Mobile" className="container-x relative">
+        <nav aria-label="Mobile" className="relative m-auto w-full px-8 py-28 sm:px-10">
           <ul className="space-y-1">
             {NAV_LINKS.map((link, i) => (
               <li
@@ -180,7 +203,7 @@ export default function Navbar() {
                   <span className="font-display text-xs font-bold text-lime/70">
                     0{i + 1}
                   </span>
-                  <span className="font-display text-4xl font-extrabold uppercase tracking-tight text-cream transition-transform duration-300 group-hover:translate-x-2">
+                  <span className="font-display text-[1.65rem] font-extrabold uppercase leading-none tracking-tight text-cream transition-transform duration-300 group-hover:translate-x-2 min-[400px]:text-4xl">
                     {link.label}
                   </span>
                 </button>

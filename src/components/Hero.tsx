@@ -78,7 +78,7 @@ export default function Hero({ started }: { started: boolean }) {
           Premium cleaning · Lagos
         </p>
 
-        <h1 className="mt-6 font-display text-[clamp(2.7rem,8.2vw,6.6rem)] font-extrabold uppercase leading-[0.98] tracking-[-0.02em]">
+        <h1 className="mt-6 font-display text-[clamp(2.35rem,8.2vw,6.6rem)] font-extrabold uppercase leading-[0.98] tracking-[-0.02em]">
           <span className="block overflow-hidden pb-[0.08em]">
             <span className="hero-line-inner block will-change-transform">Your space.</span>
           </span>

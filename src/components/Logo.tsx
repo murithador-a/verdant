@@ -24,7 +24,7 @@ export default function Logo({ tone = "dark", className }: LogoProps) {
       </svg>
       <span
         className={cn(
-          "font-display text-[15px] font-extrabold tracking-[0.16em]",
+          "font-display text-[12.5px] font-extrabold tracking-[0.12em] min-[380px]:text-[15px] min-[380px]:tracking-[0.16em]",
           light ? "text-cream" : "text-charcoal",
         )}
       >

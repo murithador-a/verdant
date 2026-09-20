@@ -58,7 +58,12 @@ export default function FinalCta() {
         </Reveal>
         <Reveal delay={150}>
           <div className="mt-10 flex justify-center">
-            <WhatsAppButton size="lg" showIcon label="Talk to Verdant Clean on WhatsApp">
+            <WhatsAppButton
+              size="md"
+              showIcon
+              label="Talk to Verdant Clean on WhatsApp"
+              className="w-full min-[560px]:w-auto min-[560px]:px-9 min-[560px]:py-4 min-[560px]:text-base"
+            >
               Talk to Verdant Clean
             </WhatsAppButton>
           </div>

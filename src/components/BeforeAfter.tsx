@@ -50,7 +50,7 @@ export default function BeforeAfter() {
         {/* Comparison frame */}
         <Reveal delay={150} className="mt-7">
           <div className="overflow-hidden rounded-[1.75rem] bg-forest ring-1 ring-charcoal/10 sm:rounded-[2.25rem]">
-            <div className="relative aspect-[4/5] select-none overflow-hidden sm:aspect-[16/9]">
+            <div className="group/ba relative aspect-[4/5] select-none overflow-hidden sm:aspect-[16/9]">
               {/* AFTER (base layer) */}
               <img
                 key={`after-${room.id}`}
@@ -94,7 +94,7 @@ export default function BeforeAfter() {
               <div aria-hidden="true" className="absolute inset-y-0" style={{ left: `${pos}%` }}>
                 <div className="absolute inset-y-0 -translate-x-1/2">
                   <div className="h-full w-[3px] -translate-x-1/2 rounded-full bg-lime shadow-[0_0_20px_rgba(199,232,106,0.55)]" />
-                  <div className="absolute top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-1 rounded-full bg-lime text-forest shadow-xl ring-4 ring-pine/25 transition-transform duration-300 peer-focus-visible:scale-110">
+                  <div className="absolute top-1/2 flex h-14 w-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-1 rounded-full bg-lime text-forest shadow-xl ring-4 ring-pine/25 transition-all duration-300 group-focus-within/ba:scale-110 group-focus-within/ba:ring-lime-deep">
                     <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
                       <path d="m9 6-4 6 4 6" />
                       <path d="m15 6 4 6-4 6" />
