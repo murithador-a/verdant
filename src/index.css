@@ -190,8 +190,9 @@ body {
 }
 
 /* ---------- Before / After ---------- */
+/* Before photo now carries the actual dirt and clutter; the grade only fuses the seam */
 .ba-before {
-  filter: brightness(0.78) saturate(0.62) contrast(0.94) sepia(0.28);
+  filter: brightness(0.97) saturate(0.95);
 }
 .ba-range {
   -webkit-appearance: none;

@@ -110,6 +110,10 @@ export interface CompareRoom {
   label: string;
   image: string;
   alt: string;
+  /** Before-state counterpart image (paired with image; real client photos are a two-line edit). */
+  beforeImage: string;
+  /** Visible grime and clutter description for the before image. */
+  beforeAlt: string;
   note: string;
 }
 
@@ -119,6 +123,8 @@ export const COMPARE_ROOMS: CompareRoom[] = [
     label: "Kitchen",
     image: "/images/ba-kitchen.jpg",
     alt: "A spotless modern kitchen with sage cabinets and quartz island",
+    beforeImage: "/images/ba-kitchen-before.jpg",
+    beforeAlt: "Cluttered kitchen with grease smudges on cabinets, crusted hob, unwashed dishes on the island, open cupboard, and overflowing bin",
     note: "Degreased, descaled, and polished — including inside the microwave.",
   },
   {
@@ -126,6 +132,8 @@ export const COMPARE_ROOMS: CompareRoom[] = [
     label: "Bathroom",
     image: "/images/ba-bathroom.jpg",
     alt: "A pristine marble bathroom with glass shower",
+    beforeImage: "/images/ba-bathroom-before.jpg",
+    beforeAlt: "Messy bathroom with limescale-clouded shower glass, water spots on mirror, toiletries strewn across vanity, and damp towels on floor",
     note: "Grout, glass, and chrome detailed until they shine.",
   },
   {
@@ -133,6 +141,8 @@ export const COMPARE_ROOMS: CompareRoom[] = [
     label: "Bedroom",
     image: "/images/ba-bedroom.jpg",
     alt: "A serene neutral bedroom with crisp hotel-style bedding",
+    beforeImage: "/images/ba-bedroom-before.jpg",
+    beforeAlt: "Disordered bedroom with unmade bed, pillows on the floor, clothes across the rug, open drawer, and cluttered nightstands",
     note: "Dusted top to bottom, linen refreshed, calm restored.",
   },
   {
@@ -140,6 +150,8 @@ export const COMPARE_ROOMS: CompareRoom[] = [
     label: "Office",
     image: "/images/service-office.jpg",
     alt: "A clean, organised modern workspace",
+    beforeImage: "/images/ba-office-before.jpg",
+    beforeAlt: "Untidy office with crumbs and ring stains on desks, pooled cables on floor, overflowing bin, and smudged windows",
     note: "Desks, screens, and shared spaces reset for Monday morning.",
   },
 ];
