@@ -30,16 +30,28 @@ export default function Team() {
                     TONES[member.tone],
                   )}
                 >
+                  {/* Monogram sits beneath as a graceful fallback while loading */}
                   <span
                     aria-hidden="true"
-                    className="font-display text-[7rem] font-extrabold leading-none opacity-90 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110 sm:text-[8.5rem]"
+                    className="font-display text-[7rem] font-extrabold leading-none opacity-90 sm:text-[8.5rem]"
                   >
                     {member.initials}
                   </span>
+                  <img
+                    src={member.image}
+                    alt={member.alt}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => e.currentTarget.remove()}
+                    style={{ objectPosition: "50% 18%" }}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+                  />
+                  {/* Soft editorial grade for brand cohesion */}
                   <span
                     aria-hidden="true"
-                    className="absolute bottom-4 right-5 font-display text-[11px] font-bold uppercase tracking-[0.24em] opacity-50"
-                  >
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-pine/35 via-transparent to-transparent"
+                  />
+                  <span className="absolute bottom-4 right-4 rounded-full bg-pine/55 px-3.5 py-1.5 font-display text-[10px] font-bold uppercase tracking-[0.22em] text-cream backdrop-blur-md">
                     Lagos
                   </span>
                 </div>

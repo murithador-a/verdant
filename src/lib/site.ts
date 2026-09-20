@@ -274,13 +274,47 @@ export interface TeamMember {
   role: string;
   initials: string;
   tone: "forest" | "sage" | "lime" | "charcoal";
+  image: string;
+  alt: string;
 }
 
 export const TEAM: TeamMember[] = [
-  { name: "Amina", role: "Cleaning Specialist", initials: "A", tone: "forest" },
-  { name: "David", role: "Team Lead", initials: "D", tone: "sage" },
-  { name: "Tolu", role: "Cleaning Specialist", initials: "T", tone: "charcoal" },
-  { name: "Grace", role: "Quality Supervisor", initials: "G", tone: "lime" },
+  {
+    name: "Amina",
+    role: "Cleaning Specialist",
+    initials: "A",
+    tone: "forest",
+    image:
+      "https://images.pexels.com/photos/33646629/pexels-photo-33646629.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=1000",
+    alt: "Portrait of Amina, Cleaning Specialist at Verdant Clean",
+  },
+  {
+    name: "David",
+    role: "Team Lead",
+    initials: "D",
+    tone: "sage",
+    image:
+      "https://images.pexels.com/photos/15929275/pexels-photo-15929275.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=1000",
+    alt: "Portrait of David, Team Lead at Verdant Clean",
+  },
+  {
+    name: "Tolu",
+    role: "Cleaning Specialist",
+    initials: "T",
+    tone: "charcoal",
+    image:
+      "https://images.pexels.com/photos/33993456/pexels-photo-33993456.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=1000",
+    alt: "Portrait of Tolu, Cleaning Specialist at Verdant Clean",
+  },
+  {
+    name: "Grace",
+    role: "Quality Supervisor",
+    initials: "G",
+    tone: "lime",
+    image:
+      "https://images.pexels.com/photos/11515380/pexels-photo-11515380.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=1000",
+    alt: "Portrait of Grace, Quality Supervisor at Verdant Clean",
+  },
 ];
 
 /* ------------------------------ Locations -------------------------- */
