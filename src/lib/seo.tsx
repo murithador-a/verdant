@@ -3,6 +3,7 @@
 /* ------------------------------------------------------------------ */
 
 import { useEffect } from "react";
+import { SITE_URL, absoluteUrl } from "./site-url";
 
 interface SEOProps {
   title?: string;
@@ -11,7 +12,6 @@ interface SEOProps {
   type?: string;
 }
 
-const BASE_URL = "https://verdantclean.ng";
 const DEFAULT_TITLE =
   "Verdant Clean — Premium Cleaning Services in Lagos | Home, Office & Commercial";
 const DEFAULT_DESCRIPTION =
@@ -49,7 +49,7 @@ export default function SEOHead({
   useEffect(() => {
     const t = title ? `${title} | Verdant Clean` : DEFAULT_TITLE;
     const d = description || DEFAULT_DESCRIPTION;
-    const u = url || BASE_URL;
+    const u = url || absoluteUrl();
 
     // Standard
     document.title = t;
@@ -110,15 +110,15 @@ export function ArticleSchema({
     author: {
       "@type": "Organization",
       name: "Verdant Clean",
-      url: BASE_URL,
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: "Verdant Clean",
-      url: BASE_URL,
+      url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/favicon.svg`,
+        url: absoluteUrl("/favicon.svg"),
       },
     },
     mainEntityOfPage: {
