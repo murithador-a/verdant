@@ -5,6 +5,19 @@ import { WhatsAppButton } from "./WhatsAppCTA";
 import { ArrowIcon } from "./icons";
 import { ARTICLES, type Article } from "../lib/site";
 import { getLenis } from "../lib/motion";
+import { ARTICLE_HASH_PREFIX, SITE_URL, absoluteUrl, articleUrl } from "../lib/site-url";
+
+/**
+ * The article reader is a modal rather than a route, so each article is
+ * addressable through a hash permalink (`#article-3`). The RSS feed and the
+ * Article structured data point at these so subscribers and crawlers reach
+ * the right piece instead of the top of the Journal section.
+ */
+function articleFromHash(): Article | null {
+  const match = new RegExp(`^#${ARTICLE_HASH_PREFIX}(\\d+)$`).exec(window.location.hash);
+  if (!match) return null;
+  return ARTICLES.find((a) => String(a.id) === match[1]) ?? null;
+}
 
 /* Article structured data for SEO */
 function ArticleJsonLd() {
@@ -22,24 +35,25 @@ function ArticleJsonLd() {
         "@type": "Article",
         headline: a.title,
         description: a.excerpt[0],
-        image: `https://verdantclean.ng${a.image}`,
+        image: absoluteUrl(a.image),
         datePublished: "2026-09-01",
         dateModified: "2026-09-20",
         author: {
           "@type": "Organization",
           name: "Verdant Clean",
-          url: "https://verdantclean.ng/",
+          url: SITE_URL,
         },
         publisher: {
           "@type": "Organization",
           name: "Verdant Clean",
-          url: "https://verdantclean.ng/",
+          url: SITE_URL,
           logo: {
             "@type": "ImageObject",
-            url: "https://verdantclean.ng/favicon.svg",
+            url: absoluteUrl("/favicon.svg"),
           },
         },
-        mainEntityOfPage: "https://verdantclean.ng/#journal",
+        url: articleUrl(a.id),
+        mainEntityOfPage: articleUrl(a.id),
         articleSection: a.category,
       },
     })),
@@ -61,11 +75,28 @@ export default function Journal() {
   const open = useCallback((article: Article) => {
     lastFocused.current = document.activeElement as HTMLElement | null;
     setActive(article);
+    // `replaceState` keeps the permalink shareable without pushing a history
+    // entry, so Back still leaves the page rather than closing the modal.
+    history.replaceState(null, "", `#${ARTICLE_HASH_PREFIX}${article.id}`);
   }, []);
 
   const close = useCallback(() => {
     setActive(null);
+    if (articleFromHash()) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
     lastFocused.current?.focus?.();
+  }, []);
+
+  /* Open the article named by the current hash (deep links, feed clicks). */
+  useEffect(() => {
+    const sync = (): void => {
+      const next = articleFromHash();
+      setActive((current) => (current?.id === next?.id ? current : next));
+    };
+    sync();
+    window.addEventListener("hashchange", sync);
+    return () => window.removeEventListener("hashchange", sync);
   }, []);
 
   useEffect(() => {

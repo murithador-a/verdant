@@ -1,22 +1,19 @@
 # https://verdantclean.ng/robots.txt
 # Verdant Clean — Premium Cleaning Services in Lagos
 
+# This is a static Vite build: there is no /api/, /_next/ or /admin/ to hide.
+# Those rules were carried over from a Next.js template, and the accompanying
+# `Disallow: /*.json$` blocked /manifest.json — the very file the browser
+# fetches for the install prompt — while the `Allow: /manifest.json` below it
+# tried to permit it. Google resolves such collisions by longest match and
+# other crawlers by first match, so the outcome differed per crawler. With
+# nothing sensitive on the origin, everything is simply allowed.
+
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://verdantclean.ng/sitemap.xml
-
-# Crawl-delay (optional, respected by Bing/Yandex)
+# Crawl-delay (optional, respected by Bing/Yandex; ignored by Google)
 Crawl-delay: 1
 
-# Disallow internal paths
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
-Disallow: /*.json$
-
-# Allow important assets
-Allow: /images/
-Allow: /favicon.svg
-Allow: /manifest.json
+# Sitemaps
+Sitemap: https://verdantclean.ng/sitemap.xml

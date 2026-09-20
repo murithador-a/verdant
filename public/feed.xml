@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Verdant Clean Journal — RSS 2.0 feed.
+
+  Each item now points at its own permalink (`/#article-N`). The Journal
+  reader is a modal rather than a route, and the app resolves that hash into
+  the matching article on load, so a subscriber clicking an item lands on the
+  article instead of the top of the Journal section. Because those links are
+  real permalinks, `<guid>` can be declared `isPermaLink="true"`.
+
+  `<image><url>` uses a PNG, not the SVG favicon: the RSS 2.0 image element
+  allows GIF, JPEG or PNG only, and most readers ignore an SVG.
+-->
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -11,17 +23,20 @@
     <language>en-NG</language>
     <copyright>© 2026 Verdant Clean. All rights reserved.</copyright>
     <lastBuildDate>Sat, 20 Sep 2026 00:00:00 +0100</lastBuildDate>
+    <ttl>180</ttl>
     <atom:link href="https://verdantclean.ng/feed.xml" rel="self" type="application/rss+xml" />
     <image>
-      <url>https://verdantclean.ng/favicon.svg</url>
+      <url>https://verdantclean.ng/images/rss-icon.png</url>
       <title>Verdant Clean</title>
       <link>https://verdantclean.ng/</link>
+      <width>144</width>
+      <height>144</height>
     </image>
 
     <item>
       <title>How often should you deep-clean your home?</title>
-      <link>https://verdantclean.ng/#journal</link>
-      <guid isPermaLink="false">verdantclean-journal-1</guid>
+      <link>https://verdantclean.ng/#article-1</link>
+      <guid isPermaLink="true">https://verdantclean.ng/#article-1</guid>
       <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
       <category>Home care</category>
       <dc:creator>Verdant Clean</dc:creator>
@@ -30,8 +45,8 @@
 
     <item>
       <title>The complete apartment reset checklist</title>
-      <link>https://verdantclean.ng/#journal</link>
-      <guid isPermaLink="false">verdantclean-journal-2</guid>
+      <link>https://verdantclean.ng/#article-2</link>
+      <guid isPermaLink="true">https://verdantclean.ng/#article-2</guid>
       <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
       <category>Checklists</category>
       <dc:creator>Verdant Clean</dc:creator>
@@ -40,8 +55,8 @@
 
     <item>
       <title>How to prepare your Airbnb for the next guest</title>
-      <link>https://verdantclean.ng/#journal</link>
-      <guid isPermaLink="false">verdantclean-journal-3</guid>
+      <link>https://verdantclean.ng/#article-3</link>
+      <guid isPermaLink="true">https://verdantclean.ng/#article-3</guid>
       <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
       <category>Short-stay</category>
       <dc:creator>Verdant Clean</dc:creator>
@@ -50,8 +65,8 @@
 
     <item>
       <title>Cleaning routines for busy professionals</title>
-      <link>https://verdantclean.ng/#journal</link>
-      <guid isPermaLink="false">verdantclean-journal-4</guid>
+      <link>https://verdantclean.ng/#article-4</link>
+      <guid isPermaLink="true">https://verdantclean.ng/#article-4</guid>
       <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
       <category>Routines</category>
       <dc:creator>Verdant Clean</dc:creator>
@@ -60,8 +75,8 @@
 
     <item>
       <title>How to keep your kitchen looking new</title>
-      <link>https://verdantclean.ng/#journal</link>
-      <guid isPermaLink="false">verdantclean-journal-5</guid>
+      <link>https://verdantclean.ng/#article-5</link>
+      <guid isPermaLink="true">https://verdantclean.ng/#article-5</guid>
       <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
       <category>Kitchen</category>
       <dc:creator>Verdant Clean</dc:creator>
@@ -70,8 +85,8 @@
 
     <item>
       <title>What to look for in a professional cleaning service</title>
-      <link>https://verdantclean.ng/#journal</link>
-      <guid isPermaLink="false">verdantclean-journal-6</guid>
+      <link>https://verdantclean.ng/#article-6</link>
+      <guid isPermaLink="true">https://verdantclean.ng/#article-6</guid>
       <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
       <category>Guides</category>
       <dc:creator>Verdant Clean</dc:creator>
