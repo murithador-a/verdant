@@ -1,10 +1,20 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import { STEPS } from "../lib/site";
+import { HowToSchema } from "../lib/seo";
 
 export default function Process() {
   return (
-    <section id="how-it-works" aria-labelledby="process-heading" className="section-pad scroll-mt-16 bg-parchment/60">
+    <>
+      <HowToSchema
+        name="How to Book a Cleaning with Verdant Clean"
+        description="Four simple steps to get your space professionally cleaned by Verdant Clean in Lagos."
+        steps={STEPS.map((s) => ({
+          name: s.title,
+          text: s.copy,
+        }))}
+      />
+      <section id="how-it-works" aria-labelledby="process-heading" className="section-pad scroll-mt-16 bg-parchment/60">
       <div className="container-x">
         <SectionHeading
           eyebrow="How it works"
@@ -42,5 +52,6 @@ export default function Process() {
         </div>
       </div>
     </section>
+    </>
   );
 }

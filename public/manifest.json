@@ -1,0 +1,51 @@
+{
+  "name": "Verdant Clean — Premium Cleaning Services in Lagos",
+  "short_name": "Verdant Clean",
+  "description": "Professional home, office, short-stay and commercial cleaning services in Lagos, Nigeria. 4.9★ rated, 2,500+ cleanings.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f5ef",
+  "theme_color": "#10261D",
+  "lang": "en-NG",
+  "dir": "ltr",
+  "categories": ["business", "lifestyle"],
+  "id": "https://verdantclean.ng/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book a Cleaning",
+      "short_name": "Book",
+      "description": "Book a cleaning service via WhatsApp",
+      "url": "/#book",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "any"
+        }
+      ]
+    },
+    {
+      "name": "View Plans",
+      "short_name": "Plans",
+      "description": "View cleaning plans and pricing",
+      "url": "/#plans",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "any"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,20 @@
+# Verdant Clean
+# https://verdantclean.ng/
+
+# TEAM
+Founder & CEO: Verdant Clean Team
+Contact: hello [at] verdantclean.ng
+From: Lagos, Nigeria
+
+# SITE
+Standards: HTML5, CSS3, ES2024, TypeScript
+Components: React 19, Tailwind CSS 4, GSAP
+Build: Vite 8
+Hosting: Production-ready
+Language: English (Nigeria)
+Doctype: HTML5
+
+# DEVELOPER
+Developer: MurkingDev
+Website: https://murking.vercel.app
+LinkedIn: https://www.linkedin.com/in/murithadorabdulmaliq

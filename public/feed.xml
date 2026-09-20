@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+  <channel>
+    <title>Verdant Clean Journal — Cleaning Tips &amp; Guides</title>
+    <link>https://verdantclean.ng/#journal</link>
+    <description>Practical cleaning guides, routines and hosting tips from Lagos cleaning professionals.</description>
+    <language>en-NG</language>
+    <copyright>© 2026 Verdant Clean. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 20 Sep 2026 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://verdantclean.ng/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://verdantclean.ng/favicon.svg</url>
+      <title>Verdant Clean</title>
+      <link>https://verdantclean.ng/</link>
+    </image>
+
+    <item>
+      <title>How often should you deep-clean your home?</title>
+      <link>https://verdantclean.ng/#journal</link>
+      <guid isPermaLink="false">verdantclean-journal-1</guid>
+      <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
+      <category>Home care</category>
+      <dc:creator>Verdant Clean</dc:creator>
+      <description>For most Lagos homes, a full deep-clean every three to four months keeps dust, humidity, and harmattan residue from settling into fabrics and corners.</description>
+    </item>
+
+    <item>
+      <title>The complete apartment reset checklist</title>
+      <link>https://verdantclean.ng/#journal</link>
+      <guid isPermaLink="false">verdantclean-journal-2</guid>
+      <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
+      <category>Checklists</category>
+      <dc:creator>Verdant Clean</dc:creator>
+      <description>Our teams reset apartments room by room: declutter surfaces first, then dust top to bottom, then floors last.</description>
+    </item>
+
+    <item>
+      <title>How to prepare your Airbnb for the next guest</title>
+      <link>https://verdantclean.ng/#journal</link>
+      <guid isPermaLink="false">verdantclean-journal-3</guid>
+      <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
+      <category>Short-stay</category>
+      <dc:creator>Verdant Clean</dc:creator>
+      <description>Five-star turnover cleaning is a system, not a scramble: strip and inspect linen, sanitise high-touch points, restock consumables, then photograph every room before lock-up.</description>
+    </item>
+
+    <item>
+      <title>Cleaning routines for busy professionals</title>
+      <link>https://verdantclean.ng/#journal</link>
+      <guid isPermaLink="false">verdantclean-journal-4</guid>
+      <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
+      <category>Routines</category>
+      <dc:creator>Verdant Clean</dc:creator>
+      <description>If you work long hours, your routine should be ruthless: ten minutes each evening for dishes, surfaces, and a halfway tidy — then outsource the rest.</description>
+    </item>
+
+    <item>
+      <title>How to keep your kitchen looking new</title>
+      <link>https://verdantclean.ng/#journal</link>
+      <guid isPermaLink="false">verdantclean-journal-5</guid>
+      <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
+      <category>Kitchen</category>
+      <dc:creator>Verdant Clean</dc:creator>
+      <description>Kitchens age through grease and clutter, not time. Wipe the hob and splashback while they're still warm, keep counters two-thirds clear.</description>
+    </item>
+
+    <item>
+      <title>What to look for in a professional cleaning service</title>
+      <link>https://verdantclean.ng/#journal</link>
+      <guid isPermaLink="false">verdantclean-journal-6</guid>
+      <pubDate>Sat, 20 Sep 2026 00:00:00 +0100</pubDate>
+      <category>Guides</category>
+      <dc:creator>Verdant Clean</dc:creator>
+      <description>Look past the price list: ask how teams are vetted and trained, whether there's a written checklist per visit, and what happens when something isn't right.</description>
+    </item>
+  </channel>
+</rss>
