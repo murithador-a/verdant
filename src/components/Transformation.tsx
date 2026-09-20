@@ -191,35 +191,37 @@ function PinnedTransformation() {
 
         {/* Bottom narrative */}
         <div className="container-x relative z-10 pb-12 sm:pb-16">
-          <div className="t-captions relative h-40 min-[400px]:h-36 sm:h-32" aria-hidden="true">
-            {STAGES.map((s, i) => (
-              <div key={s.stage} className={`t-caption t-caption-${i} absolute inset-x-0 bottom-0 max-w-md`}>
-                <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-lime">{s.stage}</p>
-                <p className="mt-2 font-display text-3xl font-extrabold uppercase tracking-tight text-cream sm:text-4xl">
-                  {s.title}
-                </p>
-                <p className="mt-2 text-sm text-cream/70 sm:text-base">{s.copy}</p>
-              </div>
-            ))}
-          </div>
+          <div className="relative">
+            <div className="t-captions relative h-40 min-[400px]:h-36 sm:h-32" aria-hidden="true">
+              {STAGES.map((s, i) => (
+                <div key={s.stage} className={`t-caption t-caption-${i} absolute inset-x-0 bottom-0 max-w-md`}>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-lime">{s.stage}</p>
+                  <p className="mt-2 font-display text-3xl font-extrabold uppercase tracking-tight text-cream sm:text-4xl">
+                    {s.title}
+                  </p>
+                  <p className="mt-2 text-sm text-cream/70 sm:text-base">{s.copy}</p>
+                </div>
+              ))}
+            </div>
 
-          {/* Finale headline */}
-          <div className="t-final pointer-events-none absolute inset-x-0 bottom-12 sm:bottom-16" aria-hidden="true">
-            <div>
-              <p className="font-display text-[clamp(2.2rem,6.5vw,5.2rem)] font-extrabold uppercase leading-[0.98] tracking-[-0.02em] text-cream">
-                <span className="block overflow-hidden pb-[0.06em]">
-                  <span className="t-final-line block">From lived-in</span>
-                </span>
-                <span className="block overflow-hidden pb-[0.1em]">
-                  <span className="t-final-line block">
-                    to looking new<span className="text-lime">.</span>
+            {/* Finale headline */}
+            <div className="t-final pointer-events-none absolute inset-x-0 bottom-0" aria-hidden="true">
+              <div>
+                <p className="font-display text-[clamp(2.2rem,6.5vw,5.2rem)] font-extrabold uppercase leading-[0.98] tracking-[-0.02em] text-cream">
+                  <span className="block overflow-hidden pb-[0.06em]">
+                    <span className="t-final-line block">From lived-in</span>
                   </span>
-                </span>
-              </p>
-              <p className="t-final-sub mt-4 max-w-md text-sm text-cream/70 sm:text-base">
-                Every Verdant visit follows the same journey — declutter, detail, polish — until
-                your space feels new again.
-              </p>
+                  <span className="block overflow-hidden pb-[0.1em]">
+                    <span className="t-final-line block">
+                      to looking new<span className="text-lime">.</span>
+                    </span>
+                  </span>
+                </p>
+                <p className="t-final-sub mt-4 max-w-md text-sm text-cream/70 sm:text-base">
+                  Every Verdant visit follows the same journey — declutter, detail, polish — until
+                  your space feels new again.
+                </p>
+              </div>
             </div>
           </div>
 
