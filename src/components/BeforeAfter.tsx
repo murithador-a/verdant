@@ -19,7 +19,7 @@ export default function BeforeAfter() {
         <SectionHeading
           eyebrow="Proof, not promises"
           title={<span id="results-heading">See the difference.</span>}
-          copy="Drag the divider. The same space, before our team arrives and after they leave."
+          copy="Same room, same angle — grime and clutter on the left, the way it is handed back on the right."
         />
 
         {/* Room selector */}
@@ -55,8 +55,7 @@ export default function BeforeAfter() {
               <img
                 key={`after-${room.id}`}
                 src={room.image}
-                alt=""
-                aria-hidden="true"
+                alt={`After: ${room.alt}`}
                 loading="lazy"
                 decoding="async"
                 draggable={false}
@@ -71,15 +70,13 @@ export default function BeforeAfter() {
               >
                 <img
                   key={`before-${room.id}`}
-                  src={room.image}
-                  alt=""
+                  src={room.beforeImage}
+                  alt={`Before: ${room.beforeAlt}`}
                   loading="lazy"
                   decoding="async"
                   draggable={false}
                   className="ba-before absolute inset-0 h-full w-full object-cover"
                 />
-                {/* Lived-in haze */}
-                <div className="absolute inset-0 bg-[radial-gradient(45%_35%_at_25%_60%,rgba(60,50,35,0.22),transparent_70%),radial-gradient(35%_30%_at_70%_25%,rgba(60,50,35,0.16),transparent_70%)]" />
               </div>
 
               {/* Labels */}
@@ -123,7 +120,7 @@ export default function BeforeAfter() {
                 <span aria-hidden="true" className="mx-2.5 text-cream/30">·</span>
                 {room.note}
               </p>
-              <p className="shrink-0 text-xs text-cream/45">Illustrative edit of the same space</p>
+              <p className="shrink-0 text-xs text-cream/45">Staged example — not a photograph of a completed job</p>
             </div>
           </div>
         </Reveal>
