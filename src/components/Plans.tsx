@@ -97,7 +97,8 @@ export default function Plans() {
                     <WhatsAppButton
                       variant={plan.featured ? "forest" : "cream"}
                       className="w-full"
-                      label={`${plan.cta} — ${plan.name} plan at ${plan.price} per month, via WhatsApp`}
+                      message={plan.orderMessage}
+                      label={`Order the ${plan.name} plan at ${plan.price} per month on WhatsApp`}
                     >
                       {plan.cta}
                     </WhatsAppButton>

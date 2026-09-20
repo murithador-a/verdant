@@ -77,16 +77,29 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-cream/10 pt-7 text-[13px] text-cream/45 sm:flex-row">
           <p>© 2026 Verdant Clean. All rights reserved.</p>
-          <a
-            href={BRAND.developerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Website built by MurkingDev (opens in a new tab)"
-            className="group inline-flex items-center gap-1.5 rounded-sm transition-colors duration-300 hover:text-cream"
-          >
-            Built by <span className="font-semibold text-cream/70 group-hover:text-lime">MurkingDev</span>
-            <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
+          <p className="inline-flex items-center gap-2">
+            <a
+              href={BRAND.developerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Website built by MurkingDev — view portfolio (opens in a new tab)"
+              className="group inline-flex items-center gap-1.5 rounded-sm transition-colors duration-300 hover:text-cream"
+            >
+              Built by <span className="font-semibold text-cream/70 group-hover:text-lime">MurkingDev</span>
+              <ArrowUpRightIcon className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+            <span aria-hidden="true">·</span>
+            <a
+              href={BRAND.developerLinkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="MurkingDev on LinkedIn (opens in a new tab)"
+              className="inline-flex items-center gap-1.5 rounded-sm transition-colors duration-300 hover:text-lime"
+            >
+              <SocialIcon name="linkedin" className="h-3.5 w-3.5" />
+              LinkedIn
+            </a>
+          </p>
         </div>
       </div>
 
