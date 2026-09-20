@@ -199,7 +199,7 @@ export default function Navbar() {
             <p className="mt-5 text-sm text-cream/50">Lagos · Available 7 days a week</p>
           </div>
         </nav>
-      </div>
+      </aside>
     </>
   );
 }
