@@ -65,4 +65,4 @@ public/images/  # Art-directed imagery (16 assets)
 
 ---
 
-© 2026 Verdant Clean. Built by [MurkingDev](https://murking.vercel.app).
+© 2026 Verdant Clean. Built by [MurkingDev](https://murking.vercel.app) · [LinkedIn](https://www.linkedin.com/in/murithadorabdulmaliq).

@@ -3,6 +3,8 @@
 /* components.                                                         */
 /* ------------------------------------------------------------------ */
 
+import { planOrderMessage } from "./whatsapp";
+
 export interface NavLink {
   label: string;
   target: string;
@@ -168,6 +170,8 @@ export interface Plan {
   featured: boolean;
   badge?: string;
   cta: string;
+  /** Pre-filled WhatsApp message for ordering this plan. */
+  orderMessage: string;
 }
 
 export const PLANS: Plan[] = [
@@ -179,6 +183,7 @@ export const PLANS: Plan[] = [
     features: ["Full-home standard clean", "Kitchen & bathrooms detailed", "Linen change on request", "Easy rescheduling"],
     featured: false,
     cta: "Choose Essential",
+    orderMessage: planOrderMessage("Essential", "₦35,000", "1 cleaning per month"),
   },
   {
     name: "Comfort",
@@ -194,6 +199,7 @@ export const PLANS: Plan[] = [
     featured: true,
     badge: "Most popular",
     cta: "Choose Comfort",
+    orderMessage: planOrderMessage("Comfort", "₦65,000", "2 cleanings per month"),
   },
   {
     name: "Signature",
@@ -203,6 +209,7 @@ export const PLANS: Plan[] = [
     features: ["Weekly visits", "Rotating deep-clean focus", "Laundry & extras", "Priority support line"],
     featured: false,
     cta: "Choose Signature",
+    orderMessage: planOrderMessage("Signature", "₦120,000", "4 cleanings per month"),
   },
 ];
 
@@ -519,4 +526,5 @@ export const BRAND = {
   tagline: "We make spaces feel new.",
   developerName: "MurkingDev",
   developerUrl: "https://murking.vercel.app",
+  developerLinkedin: "https://www.linkedin.com/in/murithadorabdulmaliq",
 };

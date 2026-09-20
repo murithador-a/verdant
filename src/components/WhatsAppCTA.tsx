@@ -29,6 +29,8 @@ interface WhatsAppButtonProps {
   /** Accessible label — defaults to a descriptive WhatsApp label. */
   label?: string;
   showIcon?: boolean;
+  /** Pre-filled WhatsApp message — defaults to the brand message. */
+  message?: string;
 }
 
 /**
@@ -42,10 +44,11 @@ export function WhatsAppButton({
   className,
   label,
   showIcon = false,
+  message,
 }: WhatsAppButtonProps) {
   return (
     <a
-      href={whatsappLink()}
+      href={whatsappLink(message)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label ?? "Chat with Verdant Clean on WhatsApp"}

@@ -9,3 +9,8 @@ export const WHATSAPP_MESSAGE =
 export function whatsappLink(message: string = WHATSAPP_MESSAGE): string {
   return `https://wa.me/?text=${encodeURIComponent(message)}`;
 }
+
+/** Pre-filled order message for a specific cleaning plan. */
+export function planOrderMessage(name: string, price: string, rhythm: string): string {
+  return `Hello Verdant Clean! I want to order the ${name} plan (${price}/month — ${rhythm}). Please share the next steps.`;
+}
