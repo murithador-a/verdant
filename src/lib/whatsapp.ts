@@ -1,0 +1,11 @@
+/**
+ * Central WhatsApp conversion system.
+ * Every major conversion CTA on the site points here — Verdant Clean
+ * takes bookings and quotes conversationally over WhatsApp.
+ */
+export const WHATSAPP_MESSAGE =
+  "Hey Murking! I love this website and I want to build something similar for my business. I'd like to discuss it with you.";
+
+export function whatsappLink(message: string = WHATSAPP_MESSAGE): string {
+  return `https://wa.me/?text=${encodeURIComponent(message)}`;
+}
