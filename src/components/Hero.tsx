@@ -94,17 +94,21 @@ export default function Hero({ started }: { started: boolean }) {
           schedule and your standards.
         </p>
 
-        <div className="mt-9 flex flex-wrap items-center gap-4">
-          <span className="hero-cta inline-flex">
-            <WhatsAppButton size="lg" label="Book a cleaning with Verdant Clean on WhatsApp">
+        <div className="mt-9 flex flex-col gap-4 min-[560px]:flex-row min-[560px]:flex-wrap min-[560px]:items-center">
+          <span className="hero-cta flex min-[560px]:inline-flex">
+            <WhatsAppButton
+              size="md"
+              label="Book a cleaning with Verdant Clean on WhatsApp"
+              className="w-full min-[560px]:w-auto min-[560px]:px-9 min-[560px]:py-4 min-[560px]:text-base"
+            >
               Book a Cleaning
             </WhatsAppButton>
           </span>
-          <span className="hero-cta inline-flex">
+          <span className="hero-cta flex min-[560px]:inline-flex">
             <button
               type="button"
               onClick={() => scrollToId("services")}
-              className="group inline-flex items-center justify-center gap-2.5 rounded-full border border-cream/35 px-9 py-4 font-display text-base font-bold text-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-cream/70 hover:bg-cream/10 active:translate-y-0"
+              className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-cream/35 px-7 py-3.5 font-display text-[15px] font-bold text-cream backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-cream/70 hover:bg-cream/10 active:translate-y-0 min-[560px]:w-auto min-[560px]:px-9 min-[560px]:py-4 min-[560px]:text-base"
             >
               Explore Services
               <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">

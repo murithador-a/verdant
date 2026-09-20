@@ -57,7 +57,7 @@ function StatItem({ stat }: { stat: Stat }) {
       ref={ref}
       className="border-l border-charcoal/10 px-6 py-8 text-center first:border-l-0 sm:py-10 max-lg:odd:border-l-0 max-lg:[&:nth-child(n+3)]:border-t"
     >
-      <p className="font-display text-[clamp(2.4rem,5vw,3.6rem)] font-extrabold tracking-tight text-forest">
+      <p className="font-display text-[clamp(1.9rem,8vw,3.6rem)] font-extrabold tracking-tight text-forest">
         {stat.prefix}
         {display}
         <span className="text-lime-deep">{stat.suffix}</span>

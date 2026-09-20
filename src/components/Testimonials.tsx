@@ -17,9 +17,13 @@ export default function Testimonials() {
           align="center"
         />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
-            <Reveal key={t.name} delay={i * 100} className="h-full">
+            <Reveal
+              key={t.name}
+              delay={i * 100}
+              className={cn("h-full", i === 2 && "sm:col-span-2 xl:col-span-1")}
+            >
               <figure className="flex h-full flex-col rounded-[1.75rem] bg-white/70 p-8 ring-1 ring-charcoal/10 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_26px_50px_-24px_rgba(16,38,29,0.35)]">
                 <div className="flex items-center gap-1" aria-label="5 out of 5 stars">
                   {Array.from({ length: 5 }).map((_, s) => (

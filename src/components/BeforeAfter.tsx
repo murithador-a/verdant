@@ -34,7 +34,7 @@ export default function BeforeAfter() {
                   aria-pressed={active}
                   onClick={() => setRoomId(r.id)}
                   className={cn(
-                    "rounded-full px-6 py-2.5 font-display text-sm font-bold transition-all duration-300",
+                    "rounded-full px-5 py-3 font-display text-sm font-bold transition-all duration-300 min-[400px]:px-6",
                     active
                       ? "bg-forest text-cream shadow-[0_10px_26px_-12px_rgba(16,38,29,0.7)]"
                       : "bg-charcoal/[0.06] text-charcoal/70 hover:bg-charcoal/[0.1] hover:text-charcoal",

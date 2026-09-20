@@ -43,7 +43,7 @@ export default function Plans() {
               </p>
             </div>
 
-            <div className="relative mt-12 grid gap-5 lg:grid-cols-3">
+            <div className="relative mx-auto mt-12 grid w-full max-w-xl gap-5 lg:max-w-none lg:grid-cols-3">
               {PLANS.map((plan, i) => (
                 <Reveal key={plan.name} delay={i * 100} className="h-full">
                   <article

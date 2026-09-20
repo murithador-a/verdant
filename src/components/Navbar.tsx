@@ -152,7 +152,7 @@ export default function Navbar() {
       <div
         id="mobile-menu"
         className={cn(
-          "fixed inset-0 z-40 flex flex-col justify-end bg-pine pb-10 pt-28 transition-all duration-500 lg:hidden",
+          "fixed inset-0 z-40 flex flex-col justify-end overflow-y-auto bg-pine pb-10 pt-24 transition-all duration-500 lg:hidden",
           open ? "visible opacity-100" : "invisible opacity-0",
         )}
       >

@@ -77,11 +77,12 @@ export default function Commercial() {
             <div className="mt-9 flex flex-col gap-5">
               <WhatsAppButton
                 variant="forest"
-                size="lg"
-                className="self-start"
+                size="md"
+                className="w-full text-center min-[560px]:w-auto min-[560px]:self-start min-[560px]:px-9 min-[560px]:py-4 min-[560px]:text-base"
                 label="Request a commercial cleaning quote on WhatsApp"
               >
-                Request a Commercial Quote
+                <span className="min-[420px]:hidden">Commercial Quote</span>
+                <span className="hidden min-[420px]:inline">Request a Commercial Quote</span>
               </WhatsAppButton>
               <p className="text-sm text-charcoal/50">
                 Dedicated account support · Flexible contracts · After-hours available

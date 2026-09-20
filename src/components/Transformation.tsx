@@ -191,7 +191,7 @@ function PinnedTransformation() {
 
         {/* Bottom narrative */}
         <div className="container-x relative z-10 pb-12 sm:pb-16">
-          <div className="t-captions relative h-28 sm:h-32" aria-hidden="true">
+          <div className="t-captions relative h-40 min-[400px]:h-36 sm:h-32" aria-hidden="true">
             {STAGES.map((s, i) => (
               <div key={s.stage} className={`t-caption t-caption-${i} absolute inset-x-0 bottom-0 max-w-md`}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-lime">{s.stage}</p>

@@ -40,7 +40,7 @@ export default function Footer() {
                     <button
                       type="button"
                       onClick={() => scrollToId(link.target)}
-                      className="rounded-sm text-[15px] text-cream/70 transition-colors duration-300 hover:text-lime"
+                      className="rounded-sm py-1 text-[15px] text-cream/70 transition-colors duration-300 hover:text-lime"
                     >
                       {link.label}
                     </button>

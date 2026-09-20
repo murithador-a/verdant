@@ -9,8 +9,8 @@ interface LogoProps {
 export default function Logo({ tone = "dark", className }: LogoProps) {
   const light = tone === "light";
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <svg viewBox="0 0 32 32" className="h-8 w-8 shrink-0" aria-hidden="true">
+    <span className={cn("inline-flex items-center gap-2 min-[380px]:gap-2.5", className)}>
+      <svg viewBox="0 0 32 32" className="h-7 w-7 shrink-0 min-[380px]:h-8 min-[380px]:w-8" aria-hidden="true">
         <rect width="32" height="32" rx="9" fill="#C7E86A" />
         <path
           d="M8.5 10.5 16 21.5 23.5 10.5"

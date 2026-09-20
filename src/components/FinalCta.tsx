@@ -46,7 +46,7 @@ export default function FinalCta() {
           </p>
           <h2
             id="book-heading"
-            className="mx-auto mt-6 max-w-4xl font-display text-[clamp(2.6rem,7.5vw,5.6rem)] font-extrabold uppercase leading-[0.98] tracking-[-0.02em] text-balance"
+            className="mx-auto mt-6 max-w-4xl font-display text-[clamp(2.3rem,10vw,5.6rem)] font-extrabold uppercase leading-[0.98] tracking-[-0.02em] text-balance"
           >
             Come home
             <br />

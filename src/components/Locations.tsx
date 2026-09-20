@@ -85,7 +85,7 @@ export default function Locations() {
             copy="From the Island to the Mainland, our crews start early and show up on time — seven days a week."
           />
           <Reveal delay={120}>
-            <ul aria-label="Areas we serve" className="mt-9 grid grid-cols-2 gap-2.5 sm:grid-cols-2">
+            <ul aria-label="Areas we serve" className="mt-9 grid grid-cols-1 gap-2.5 min-[520px]:grid-cols-2">
               {LOCATIONS.map((area) => (
                 <li
                   key={area}

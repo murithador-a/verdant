@@ -72,8 +72,8 @@ export default function HeroCanvas() {
         const orbDefs = (
           isMobile
             ? [
-                { r: 1.1, x: 4.6, y: 1.8, z: -2.5, mat: () => glass(0xf4f1e6, 0.5) },
-                { r: 0.5, x: -4.4, y: -1.2, z: -1, mat: () => glass(0xb7c9b5, 0.5) },
+                { r: 1.1, x: 1.9, y: 1.8, z: -2.5, mat: () => glass(0xf4f1e6, 0.5) },
+                { r: 0.5, x: -2, y: -1.2, z: -1, mat: () => glass(0xb7c9b5, 0.5) },
                 {
                   r: 0.34,
                   x: 2.6,
