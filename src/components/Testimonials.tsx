@@ -6,9 +6,50 @@ import { cn } from "../lib/cn";
 
 const TONES = ["bg-forest text-cream", "bg-sage text-forest", "bg-charcoal text-cream"];
 
+/* Review structured data for SEO */
+function ReviewJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://verdantclean.ng/#localbusiness",
+    "name": "Verdant Clean",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1",
+      "ratingCount": "612",
+      "reviewCount": "612"
+    },
+    "review": TESTIMONIALS.map((t) => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": t.name,
+      },
+      "datePublished": "2026-06-01",
+      "reviewBody": t.quote,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default function Testimonials() {
   return (
-    <section aria-labelledby="stories-heading" className="section-pad bg-cream">
+    <>
+      <ReviewJsonLd />
+      <section aria-labelledby="stories-heading" className="section-pad bg-cream">
       <div className="container-x">
         <SectionHeading
           eyebrow="Client stories"
@@ -60,5 +101,6 @@ export default function Testimonials() {
         </Reveal>
       </div>
     </section>
+    </>
   );
 }

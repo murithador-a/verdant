@@ -6,6 +6,53 @@ import { ArrowIcon } from "./icons";
 import { ARTICLES, type Article } from "../lib/site";
 import { getLenis } from "../lib/motion";
 
+/* Article structured data for SEO */
+function ArticleJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Verdant Clean Journal — Cleaning Tips & Guides",
+    description:
+      "Practical cleaning guides, routines and hosting tips from Lagos cleaning professionals.",
+    numberOfItems: ARTICLES.length,
+    itemListElement: ARTICLES.map((a, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Article",
+        headline: a.title,
+        description: a.excerpt[0],
+        image: `https://verdantclean.ng${a.image}`,
+        datePublished: "2026-09-01",
+        dateModified: "2026-09-20",
+        author: {
+          "@type": "Organization",
+          name: "Verdant Clean",
+          url: "https://verdantclean.ng/",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Verdant Clean",
+          url: "https://verdantclean.ng/",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://verdantclean.ng/favicon.svg",
+          },
+        },
+        mainEntityOfPage: "https://verdantclean.ng/#journal",
+        articleSection: a.category,
+      },
+    })),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
 export default function Journal() {
   const [active, setActive] = useState<Article | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -39,7 +86,9 @@ export default function Journal() {
   }, [active, close]);
 
   return (
-    <section id="journal" aria-labelledby="journal-heading" className="section-pad scroll-mt-16 bg-parchment/60">
+    <>
+      <ArticleJsonLd />
+      <section id="journal" aria-labelledby="journal-heading" className="section-pad scroll-mt-16 bg-parchment/60">
       <div className="container-x">
         <SectionHeading
           eyebrow="Journal"
@@ -139,5 +188,6 @@ export default function Journal() {
         </div>
       ) : null}
     </section>
+    </>
   );
 }
